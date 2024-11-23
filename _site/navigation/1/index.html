@@ -22,7 +22,7 @@
 {"@context":"https://schema.org","@type":"WebPage","description":"My journey through Zachtronic’s SHENZHEN I/O game.","headline":"shenzhen-io","url":"http://localhost:4000/navigation/1/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=343676c8ede4e5cc49c24c25a384816d5b66fe64">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d47c4ba39d283cdc2b3da5946ca5705515f1b87e">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -62,7 +62,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const baseUrl = window.location.origin + "/navigation/";
+        const baseUrl = window.location.origin + (window.location.pathname.includes("/shenzhen-io/") ? "/shenzhen-io/navigation/" : "/navigation/");
         const currentPage = window.location.pathname.match(/navigation\/(\d+)\//);
         const isIndexPage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
 
