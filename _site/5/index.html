@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Shenzhen-IO Walkthrough | A relatively brief walkthrough of the game Shenzhen-IO, by Zachtronics, by me.</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Shenzhen-IO Walkthrough" />
+<meta name="author" content="Parallaxes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A relatively brief walkthrough of the game Shenzhen-IO, by Zachtronics, by me." />
+<meta property="og:description" content="A relatively brief walkthrough of the game Shenzhen-IO, by Zachtronics, by me." />
+<link rel="canonical" href="http://localhost:4000/shenzhen-io/5/" />
+<meta property="og:url" content="http://localhost:4000/shenzhen-io/5/" />
+<meta property="og:site_name" content="Shenzhen-IO Walkthrough" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Shenzhen-IO Walkthrough" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Parallaxes"},"description":"A relatively brief walkthrough of the game Shenzhen-IO, by Zachtronics, by me.","headline":"Shenzhen-IO Walkthrough","url":"http://localhost:4000/shenzhen-io/5/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/shenzhen-io/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/shenzhen-io/feed.xml" title="Shenzhen-IO Walkthrough" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/shenzhen-io/">Shenzhen-IO Walkthrough</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/shenzhen-io/">Parallaxis &amp;&amp; SHENZHEN I/O</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline"></h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="" itemprop="datePublished">
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <table>
+    <tr>
+        <td><a href="/parallaxis">Parallaxis</a></td>
+        <td><a href="/main">Main</a></td>
+        <td><a href="/contents">Contents</a></td>
+    </tr>
+</table>
+
+<h1 id="part-5-replacement-factory-module---assignment-2">Part 5: Replacement Factory Module - Assignment #2</h1>
+
+<p><img src="/shenzhen-io/assets/images/p5/p5-1.png" alt="Part 5: Replacement Factory Module - Email" /></p>
+
+<p>Boom!</p>
+
+<p>Anyhow, here’s what we’ve got.</p>
+
+<p><img src="/shenzhen-io/assets/images/p5/p5-2.png" alt="Part 5: Replacement Factory Module - Seed" /></p>
+
+<p><img src="/shenzhen-io/assets/images/p5/p5-3.png" alt="Part 5: Replacement Factory Module - Task" /></p>
+
+<p><img src="/shenzhen-io/assets/images/p5/p5-4.png" alt="Part 5: Replacement Factory Module - Test" /></p>
+
+<p>All we’ve got to do is read <code class="language-plaintext highlighter-rouge">control-in</code> and output that value multipled by 2 to <code class="language-plaintext highlighter-rouge">control-out</code>. Easy enough.</p>
+
+<p>Here’s the code I wrote:</p>
+
+<p><img src="/shenzhen-io/assets/images/p5/p5-5.png" alt="Part 5: Replacement Factory Module - Board" /></p>
+
+<p>What we’re doing here is pretty simple:</p>
+
+<pre><code class="language-assembly">mov p0 acc  # Read p0 (input) into acc
+mul 2       # Multiply the value in memory (acc) by 2
+mov acc p1  # Move acc to p1 (output)
+slp 1       # Sleep
+</code></pre>
+
+<p>Lo and behold, success! (With the most efficient design)</p>
+
+<p><img src="/shenzhen-io/assets/images/p5/p5-6.png" alt="Part 5: Replacement Factory Module - Success" /></p>
+
+<p><br />
+<br /></p>
+<nav>
+    <ul>
+        <li class="prev"><a id="prev-link" href="#">Previous</a></li>
+        <li class="next"><a id="next-link" href="#">Next</a></li>
+    </ul>
+</nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const baseUrl = window.location.origin + (window.location.pathname.includes("/shenzhen-io/") ? "/shenzhen-io/" : "/");
+        const currentPage = window.location.pathname.match(/(\d+)\//);
+        const isIndexPage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/" || window.location.pathname === "/shenzhen-io/";
+
+        if (isIndexPage) {
+            document.getElementById("next-link").href = `${baseUrl}1/`;
+        } else if (currentPage) {
+            const pageNumber = parseInt(currentPage[1], 10);
+            const prevPage = pageNumber - 1;
+            const nextPage = pageNumber + 1;
+            document.getElementById("prev-link").href = pageNumber === 1 ? baseUrl : `${baseUrl}${prevPage}/`;
+            document.getElementById("next-link").href = `${baseUrl}${nextPage}/`;
+        }
+    });
+</script>
+
+<style>
+    nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        overflow: hidden;
+        height: auto;
+        position: relative;
+        font-size: 17px;
+        line-height: 18px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+
+  </div><a class="u-url" href="/shenzhen-io/5/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/shenzhen-io/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Shenzhen-IO Walkthrough</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Parallaxes</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A relatively brief walkthrough of the game Shenzhen-IO, by Zachtronics, by me.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
