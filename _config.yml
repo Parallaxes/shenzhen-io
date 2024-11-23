@@ -1,0 +1,18 @@
+# Site settings
+title: Shenzhen-IO Walkthrough
+description: A relatively brief walkthrough of the game Shenzhen-IO, by Zachtronics, by me.
+author: Parallaxes
+baseurl: "/shenzhen-io"  # Replace with your repository name, or leave blank for user/organization site
+url: "https://parallaxes.github.io"  # Replace with your GitHub Pages URL
+
+# Build settings
+markdown: kramdown
+theme: minima  # Replace with your theme, if using one
+
+# Exclude files and folders from processing
+exclude:
+  - README.md
+
+# Plugins
+plugins:
+  - jekyll-feed
