@@ -1,14 +1,14 @@
 <nav>
     <ul>
-        <li><a id="prev-link" href="#">Previous</a></li>
-        <li><a id="next-link" href="#">Next</a></li>
+        <li class="prev"><a id="prev-link" href="#">Previous</a></li>
+        <li class="next"><a id="next-link" href="#">Next</a></li>
     </ul>
 </nav>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const baseUrl = window.location.origin + (window.location.pathname.includes("/shenzhen-io/") ? "/shenzhen-io/navigation/" : "/navigation/");
-        const currentPage = window.location.pathname.match(/navigation\/(\d+)\//);
+        const baseUrl = window.location.origin + (window.location.pathname.includes("/shenzhen-io/") ? "/shenzhen-io/" : "/");
+        const currentPage = window.location.pathname.match(/(\d+)\//);
         const isIndexPage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
 
         if (isIndexPage) {
@@ -27,27 +27,34 @@
     nav {
         position: fixed;
         bottom: 0;
-        width: 52%;
-        background-color: #333;
+        width: 100%;
+        background-color: white;
         color: white;
         text-align: center;
         padding: 10px 0;
+        overflow: hidden;
+        height: auto;
+        position: relative;
+        font-size: 17px;
+        line-height: 18px;
     }
 
     nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: space-between;
     }
 
     nav ul li {
-        display: inline;
         margin: 0 15px;
     }
 
     nav ul li a {
-        color: white;
+        color: black;
         text-decoration: none;
+        font-size: 1.2em;
     }
 
     nav ul li a:hover {

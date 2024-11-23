@@ -179,7 +179,7 @@ ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }
 
 dd { margin-left: 0; }
 
-tt, code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 12px; }
+tt, code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 12px; white-space: pre-wrap; word-wrap: break-word; max-width: 100%; overflow-x: auto;}
 
 pre { margin-top: 0; margin-bottom: 0; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 12px; }
 
